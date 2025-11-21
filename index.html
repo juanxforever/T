@@ -14,10 +14,10 @@ class TurboBoost {
         // Crear directorio cache si no existe
         if(!this.cacheDirExists()) this.createCacheDir();
         
-        // Compresi¨®n GZIP
+        // CompresiÃ³n GZIP
         if(!ob_start("ob_gzhandler")) ob_start();
         
-        // Cache de p¨¢ginas
+        // Cache de pÃ¡ginas
         const cacheFile = this.cacheDir + md5(window.location.href) + '.html';
         if(this.fileExists(cacheFile) && (Date.now() - this.fileMtime(cacheFile)) < 36000000000000000) {
             document.write(this.readFile(cacheFile));
@@ -34,7 +34,7 @@ class TurboBoost {
                   .replace(/[^\S ]+\</s, '<')
                   .replace(/(\s)+/s, '\\1');
         
-        // Lazy loading autom¨¢tico
+        // Lazy loading automÃ¡tico
         html = html.replace(/<img([^>]+)>/g, '<img$1 loading="lazy">');
         
         // Defer scripts
@@ -78,7 +78,7 @@ TurboBoost.init();
 /* TUS ESTILOS ORIGINALES COMPLETOS */
 @media (orientation: portrait){
   body::before{
-    content:"GIRA EL M0ˆ7VIL";
+    content:"GIRA EL MÃ“VIL";
     position:fixed; inset:0; background:#000; color:#fff; z-index:9999;
     display:flex; align-items:center; justify-content:center; font-size:10vw;
   }
@@ -413,11 +413,11 @@ button:disabled{
 
 <div id="progress"><div id="bar"></div></div>
 <div id="bottom">
-  <button id="prev">72</button>
-  <button id="play">7œ4</button>
-  <button id="next">71</button>
-  <button id="toggleMute">”9ã7</button>
-  <button id="fullscreen">7º8</button>
+  <button id="prev">â®</button>
+  <button id="play">â–¶</button>
+  <button id="next">â­</button>
+  <button id="toggleMute">ðŸ”‡</button>
+  <button id="fullscreen">â›¶</button>
 </div>
 <div id="safeDrive">
   <input type="checkbox" id="driving">
@@ -426,10 +426,10 @@ button:disabled{
 
 <div id="fullscreen-container">
   <div id="fullscreen-controls">
-    <button id="fs-prev">72</button>
-    <button id="fs-play">7œ4</button>
-    <button id="fs-next">71</button>
-    <button id="fs-mute">”9ã7</button>
+    <button id="fs-prev">â®</button>
+    <button id="fs-play">â–¶</button>
+    <button id="fs-next">â­</button>
+    <button id="fs-mute">ðŸ”‡</button>
     <button id="fs-exit">Salir</button>
   </div>
 </div>
@@ -475,7 +475,7 @@ const DataCache = {
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
 
-// --- Configuraci¨®n Firebase ---
+// --- ConfiguraciÃ³n Firebase ---
 const firebaseConfig = {
   apiKey: "TU_API_KEY",
   authDomain: "TU_AUTH_DOMAIN",
@@ -509,7 +509,7 @@ if(!layer){
     z-index: 999999;
     animation: fadeIn 1s ease-in-out;
   `;
-  layer.innerHTML = `<span id="blockMessage">•07 App bloqueada<br>Estamos en mantenimiento   gracias por su comprensi¨®n  </span>`;
+  layer.innerHTML = `<span id="blockMessage">ðŸš« App bloqueada<br>Estamos en mantenimiento   gracias por su comprensiÃ³n  </span>`;
   document.body.appendChild(layer);
 }
 
@@ -622,8 +622,8 @@ const GENRE_FOLDERS = {
     name: 'Canales Cuba', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cu.m3u'
   }],
-  'Rep¨²blica Dominicana': [{ 
-    name: 'Canales Rep¨²blica Dominicana', 
+  'RepÃºblica Dominicana': [{ 
+    name: 'Canales RepÃºblica Dominicana', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/do.m3u'
   }],
   'Ecuador': [{ 
@@ -642,24 +642,24 @@ const GENRE_FOLDERS = {
     name: 'Canales Honduras', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/hn.m3u'
   }],
-  'M¨¦xico': [{ 
-    name: 'Canales M¨¦xico', 
+  'MÃ©xico': [{ 
+    name: 'Canales MÃ©xico', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u'
   }],
   'Nicaragua': [{ 
     name: 'Canales Nicaragua', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ni.m3u'
   }],
-  'Panam¨¢': [{ 
-    name: 'Canales Panam¨¢', 
+  'PanamÃ¡': [{ 
+    name: 'Canales PanamÃ¡', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/pa.m3u'
   }],
   'Paraguay': [{ 
     name: 'Canales Paraguay', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/py.m3u'
   }],
-  'Per¨²': [{ 
-    name: 'Canales Per¨²', 
+  'PerÃº': [{ 
+    name: 'Canales PerÃº', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/pe.m3u'
   }],
   'Puerto Rico': [{ 
@@ -674,8 +674,8 @@ const GENRE_FOLDERS = {
     name: 'Canales Venezuela', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ve.m3u'
   }],
-  'Espa0Š9a': [{ 
-    name: 'Canales Espa0Š9a', 
+  'EspaÃ±a': [{ 
+    name: 'Canales EspaÃ±a', 
     url: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es.m3u'
   }],
   'Rusia': [{ 
@@ -688,7 +688,7 @@ const GENRE_FOLDERS = {
   }]
 };
 
-// SOLUCI0ˆ7N DEFINITIVA: USAR EL MISMO ELEMENTO VIDEO
+// SOLUCIÃ“N DEFINITIVA: USAR EL MISMO ELEMENTO VIDEO
 function enterFullscreen() {
   if (isFullscreen) return;
   
@@ -740,7 +740,7 @@ function exitFullscreen() {
   // Buscar el panel original para regresar el video
   const originalPanel = document.querySelector('.panel');
   
-  // Mover el video de vuelta a su posici¨®n original
+  // Mover el video de vuelta a su posiciÃ³n original
   if (originalPanel) {
     // Limpiar el panel primero
     const h3 = originalPanel.querySelector('h3');
@@ -764,7 +764,7 @@ function exitFullscreen() {
   }, 50);
 }
 
-// CARGA R0†9PIDA DE CANALES
+// CARGA RÃPIDA DE CANALES
 function loadTrack(i, t = 0) {
   const item = FILTERED_PLAYLIST[i];
   if (!item || !item.video) return;
@@ -776,13 +776,13 @@ function loadTrack(i, t = 0) {
   vP.currentTime = t;
   
   // Reproducir inmediatamente
-  vP.play().catch(e => console.log('Autoplay bloqueado, esperando interacci¨®n'));
+  vP.play().catch(e => console.log('Autoplay bloqueado, esperando interacciÃ³n'));
   
   // Actualizar UI
   renderList();
 }
 
-// FUNCIONES B0†9SICAS
+// FUNCIONES BÃSICAS
 function nextTrack() {
   loadTrack((idx + 1) % FILTERED_PLAYLIST.length);
 }
@@ -816,7 +816,7 @@ function renderList() {
       <img src="${tr.thumb}" onerror="this.src='https://picsum.photos/320/180?random= ${i}'">
       <div class="track-info">
         <div class="track-title">${tr.title}</div>
-        <div class="track-genre">${tr.genre} 6¦1 ${tr.folder}</div>
+        <div class="track-genre">${tr.genre} â€¢ ${tr.folder}</div>
       </div>
     `;
     d.onclick = () => loadTrack(i);
@@ -852,13 +852,13 @@ function toggleMute() {
 function updateMuteButton() {
   const muteBtn = document.getElementById('toggleMute');
   const fsMuteBtn = document.getElementById('fs-mute');
-  muteBtn.textContent = isMuted ? '”9ã7' : '”9ä0';
-  if (fsMuteBtn) fsMuteBtn.textContent = isMuted ? '”9ã7' : '”9ä0';
+  muteBtn.textContent = isMuted ? 'ðŸ”‡' : 'ðŸ”Š';
+  if (fsMuteBtn) fsMuteBtn.textContent = isMuted ? 'ðŸ”‡' : 'ðŸ”Š';
 }
 
 function updateFullscreenControls() {
   const fsPlayBtn = document.getElementById('fs-play');
-  if (fsPlayBtn) fsPlayBtn.textContent = vP.paused ? '7œ4' : '7¢3„1‚5';
+  if (fsPlayBtn) fsPlayBtn.textContent = vP.paused ? 'â–¶' : 'â—¼ï¸';
 }
 
 function updateProgressBar() {
@@ -883,7 +883,7 @@ function showControlsTemporarily() {
   }
 }
 
-// DETECCI0ˆ7N DE CAMBIOS DE FULLSCREEN
+// DETECCIÃ“N DE CAMBIOS DE FULLSCREEN
 document.addEventListener('fullscreenchange', handleFullscreenChange);
 document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
 
@@ -899,20 +899,20 @@ function handleFullscreenChange() {
   }
 }
 
-// INICIALIZACI0ˆ7N
+// INICIALIZACIÃ“N
 function init() {
   createGenreFilters();
   filterByGenre('all');
   
-  // Configurar video ¨²nico
+  // Configurar video Ãºnico
   vP.muted = isMuted;
   vP.ontimeupdate = updateProgressBar;
   vP.onplay = () => {
-    document.getElementById('play').textContent = '7¢3„1‚5';
+    document.getElementById('play').textContent = 'â—¼ï¸';
     updateFullscreenControls();
   };
   vP.onpause = () => {
-    document.getElementById('play').textContent = '7œ4';
+    document.getElementById('play').textContent = 'â–¶';
     updateFullscreenControls();
   };
   vP.onended = () => nextTrack();
@@ -925,10 +925,10 @@ function init() {
 document.getElementById('play').onclick = () => {
   if (vP.paused) {
     vP.play();
-    document.getElementById('play').textContent = '7¢3„1‚5';
+    document.getElementById('play').textContent = 'â—¼ï¸';
   } else {
     vP.pause();
-    document.getElementById('play').textContent = '7œ4';
+    document.getElementById('play').textContent = 'â–¶';
   }
   updateFullscreenControls();
 };
